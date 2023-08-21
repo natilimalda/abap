@@ -1,0 +1,3 @@
+REPORT ZNATI_TESTE.
+
+WRITE: 'Hello world'.
