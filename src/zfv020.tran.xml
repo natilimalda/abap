@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TRAN" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TSTC>
+    <TCODE>ZFV020</TCODE>
+    <PGMNA>SAPMZSD_FV_MATERIAL</PGMNA>
+    <DYPNO>9001</DYPNO>
+   </TSTC>
+   <TSTCC>
+    <TCODE>ZFV020</TCODE>
+   </TSTCC>
+   <TSTCT>
+    <SPRSL>E</SPRSL>
+    <TCODE>ZFV020</TCODE>
+    <TTEXT>Modificar Material</TTEXT>
+   </TSTCT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

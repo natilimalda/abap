@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>SAPMZSD_FV</NAME>
+    <NAME>SAPMZSD_FV_MATERIAL</NAME>
     <SUBC>M</SUBC>
     <RLOAD>E</RLOAD>
     <FIXPT>X</FIXPT>
@@ -12,10 +12,10 @@
    <DYNPROS>
     <item>
      <HEADER>
-      <PROGRAM>SAPMZSD_FV</PROGRAM>
+      <PROGRAM>SAPMZSD_FV_MATERIAL</PROGRAM>
       <SCREEN>9000</SCREEN>
       <LANGUAGE>E</LANGUAGE>
-      <DESCRIPT>Criar cliente</DESCRIPT>
+      <DESCRIPT>Criar Material</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>9000</NEXTSCREEN>
       <LINES>027</LINES>
@@ -32,13 +32,13 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>FRAME</TYPE>
-       <NAME>%#AUTOTEXT006</NAME>
-       <TEXT>Dados_do_cliente_______________________________________________________________________________________________________</TEXT>
+       <NAME>%#AUTOTEXT001</NAME>
+       <TEXT>Dados_do_material______________________________________________________________________________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
        <LENGTH>120</LENGTH>
        <VISLENGTH>120</VISLENGTH>
-       <HEIGHT>014</HEIGHT>
+       <HEIGHT>011</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
       </RPY_DYFATC>
@@ -46,12 +46,12 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEXT</TYPE>
-       <NAME>%#AUTOTEXT001</NAME>
-       <TEXT>Cód_do_Cliente_</TEXT>
+       <NAME>%#AUTOTEXT002</NAME>
+       <TEXT>Cód._do_material</TEXT>
        <LINE>002</LINE>
        <COLUMN>002</COLUMN>
-       <LENGTH>015</LENGTH>
-       <VISLENGTH>015</VISLENGTH>
+       <LENGTH>016</LENGTH>
+       <VISLENGTH>016</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
@@ -61,7 +61,7 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEMPLATE</TYPE>
-       <NAME>LS_CLIENTES-KUNNR</NAME>
+       <NAME>GD_MATERIAL-MATNR</NAME>
        <TEXT>___________</TEXT>
        <LINE>002</LINE>
        <COLUMN>019</COLUMN>
@@ -76,12 +76,12 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEXT</TYPE>
-       <NAME>%#AUTOTEXT002</NAME>
-       <TEXT>Nome_do_Cliente</TEXT>
+       <NAME>%#AUTOTEXT003</NAME>
+       <TEXT>Título_</TEXT>
        <LINE>003</LINE>
        <COLUMN>002</COLUMN>
-       <LENGTH>015</LENGTH>
-       <VISLENGTH>015</VISLENGTH>
+       <LENGTH>007</LENGTH>
+       <VISLENGTH>007</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
@@ -91,45 +91,13 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEMPLATE</TYPE>
-       <NAME>LS_CLIENTES-NOME</NAME>
+       <NAME>GD_MATERIAL-MAKTX</NAME>
        <TEXT>____________________________________________________________________________________________________________________________________</TEXT>
        <ROLLING>X</ROLLING>
        <LINE>003</LINE>
        <COLUMN>019</COLUMN>
        <LENGTH>180</LENGTH>
-       <VISLENGTH>071</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEXT</TYPE>
-       <NAME>%#AUTOTEXT003</NAME>
-       <TEXT>E-mail</TEXT>
-       <LINE>004</LINE>
-       <COLUMN>002</COLUMN>
-       <LENGTH>006</LENGTH>
-       <VISLENGTH>006</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <FORMAT>CHAR</FORMAT>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELLEFT>X</LABELLEFT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>LS_CLIENTES-EMAIL</NAME>
-       <TEXT>____________________________________________________________________________________________________________________________________</TEXT>
-       <ROLLING>X</ROLLING>
-       <LINE>004</LINE>
-       <COLUMN>019</COLUMN>
-       <LENGTH>255</LENGTH>
-       <VISLENGTH>071</VISLENGTH>
+       <VISLENGTH>079</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <UP_LOWER>X</UP_LOWER>
@@ -141,7 +109,37 @@
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>%#AUTOTEXT004</NAME>
-       <TEXT>Limite_de_Créd</TEXT>
+       <TEXT>Valor_Liquído</TEXT>
+       <LINE>004</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>013</LENGTH>
+       <VISLENGTH>013</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <LABELLEFT>X</LABELLEFT>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>GD_MATERIAL-VALOR_LIQUIDO</NAME>
+       <TEXT>________________________</TEXT>
+       <LINE>004</LINE>
+       <COLUMN>019</COLUMN>
+       <LENGTH>024</LENGTH>
+       <VISLENGTH>024</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>DEC</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>%#AUTOTEXT005</NAME>
+       <TEXT>Perc_de_Impost</TEXT>
        <LINE>005</LINE>
        <COLUMN>002</COLUMN>
        <LENGTH>014</LENGTH>
@@ -155,7 +153,7 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEMPLATE</TYPE>
-       <NAME>LS_CLIENTES-LIM_CRED</NAME>
+       <NAME>GD_MATERIAL-IMPOSTO_PERC</NAME>
        <TEXT>________________________</TEXT>
        <LINE>005</LINE>
        <COLUMN>019</COLUMN>
@@ -170,12 +168,12 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEXT</TYPE>
-       <NAME>%#AUTOTEXT005</NAME>
-       <TEXT>Status_</TEXT>
+       <NAME>%#AUTOTEXT006</NAME>
+       <TEXT>Peso_bruto_</TEXT>
        <LINE>006</LINE>
        <COLUMN>002</COLUMN>
-       <LENGTH>007</LENGTH>
-       <VISLENGTH>007</VISLENGTH>
+       <LENGTH>011</LENGTH>
+       <VISLENGTH>011</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
@@ -185,13 +183,133 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEMPLATE</TYPE>
-       <NAME>LS_CLIENTES-STATUS</NAME>
-       <TEXT>_</TEXT>
-       <DROPDOWN>K</DROPDOWN>
+       <NAME>GD_MATERIAL-PESO_BRUTO</NAME>
+       <TEXT>_______________________</TEXT>
        <LINE>006</LINE>
        <COLUMN>019</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>004</VISLENGTH>
+       <LENGTH>023</LENGTH>
+       <VISLENGTH>023</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>DEC</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>%#AUTOTEXT007</NAME>
+       <TEXT>Unid_de_med</TEXT>
+       <LINE>007</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>011</LENGTH>
+       <VISLENGTH>011</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <LABELLEFT>X</LABELLEFT>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>GD_MATERIAL-VRKME</NAME>
+       <TEXT>___</TEXT>
+       <LINE>007</LINE>
+       <COLUMN>019</COLUMN>
+       <LENGTH>003</LENGTH>
+       <VISLENGTH>003</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>%#AUTOTEXT008</NAME>
+       <TEXT>Quant.</TEXT>
+       <LINE>008</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>006</LENGTH>
+       <VISLENGTH>006</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <LABELLEFT>X</LABELLEFT>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>GD_MATERIAL-UMREZ</NAME>
+       <TEXT>_________</TEXT>
+       <LINE>008</LINE>
+       <COLUMN>019</COLUMN>
+       <LENGTH>009</LENGTH>
+       <VISLENGTH>009</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>DEC</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>%#AUTOTEXT009</NAME>
+       <TEXT>Quant._estoque</TEXT>
+       <LINE>009</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>014</LENGTH>
+       <VISLENGTH>014</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <LABELLEFT>X</LABELLEFT>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>GD_MATERIAL-ESTOQUE</NAME>
+       <TEXT>___________</TEXT>
+       <LINE>009</LINE>
+       <COLUMN>019</COLUMN>
+       <LENGTH>011</LENGTH>
+       <VISLENGTH>011</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>INT4</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>%#AUTOTEXT010</NAME>
+       <TEXT>Status</TEXT>
+       <LINE>010</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>006</LENGTH>
+       <VISLENGTH>006</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <LABELLEFT>X</LABELLEFT>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>GD_MATERIAL-STATUS</NAME>
+       <TEXT>___</TEXT>
+       <DROPDOWN>K</DROPDOWN>
+       <LINE>010</LINE>
+       <COLUMN>019</COLUMN>
+       <LENGTH>003</LENGTH>
+       <VISLENGTH>005</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <INPUT_FLD>X</INPUT_FLD>
@@ -229,10 +347,10 @@
     </item>
     <item>
      <HEADER>
-      <PROGRAM>SAPMZSD_FV</PROGRAM>
+      <PROGRAM>SAPMZSD_FV_MATERIAL</PROGRAM>
       <SCREEN>9001</SCREEN>
       <LANGUAGE>E</LANGUAGE>
-      <DESCRIPT>Modificar Cliente</DESCRIPT>
+      <DESCRIPT>Id Material</DESCRIPT>
       <TYPE>N</TYPE>
       <NEXTSCREEN>9001</NEXTSCREEN>
       <LINES>027</LINES>
@@ -250,11 +368,11 @@
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>FRAME</TYPE>
        <NAME>%#AUTOTEXT001</NAME>
-       <TEXT>Dados_Cliente__________________________________________________________________________________________________</TEXT>
+       <TEXT>Dados_do_Material______________________________________________________________________________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>001</COLUMN>
-       <LENGTH>112</LENGTH>
-       <VISLENGTH>112</VISLENGTH>
+       <LENGTH>120</LENGTH>
+       <VISLENGTH>120</VISLENGTH>
        <HEIGHT>003</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
@@ -264,11 +382,11 @@
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>%#AUTOTEXT002</NAME>
-       <TEXT>ID_Cliente_</TEXT>
+       <TEXT>Cód._Material</TEXT>
        <LINE>002</LINE>
        <COLUMN>002</COLUMN>
-       <LENGTH>011</LENGTH>
-       <VISLENGTH>011</VISLENGTH>
+       <LENGTH>013</LENGTH>
+       <VISLENGTH>013</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
@@ -278,12 +396,12 @@
        <CONT_TYPE>SCREEN</CONT_TYPE>
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEMPLATE</TYPE>
-       <NAME>LD_ID</NAME>
-       <TEXT>__________</TEXT>
+       <NAME>LD_MATERIAL</NAME>
+       <TEXT>__________________</TEXT>
        <LINE>002</LINE>
-       <COLUMN>014</COLUMN>
-       <LENGTH>010</LENGTH>
-       <VISLENGTH>010</VISLENGTH>
+       <COLUMN>016</COLUMN>
+       <LENGTH>018</LENGTH>
+       <VISLENGTH>018</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <INPUT_FLD>X</INPUT_FLD>
@@ -332,7 +450,7 @@
       <ACTCODE>000001</ACTCODE>
       <PFKCODE>000001</PFKCODE>
       <BUTCODE>0001</BUTCODE>
-      <INT_NOTE>Criar Cliente</INT_NOTE>
+      <INT_NOTE>Criar Material</INT_NOTE>
      </RSMPE_STAT>
      <RSMPE_STAT>
       <CODE>S9001</CODE>
@@ -340,7 +458,7 @@
       <ACTCODE>000002</ACTCODE>
       <PFKCODE>000002</PFKCODE>
       <BUTCODE>0001</BUTCODE>
-      <INT_NOTE>Modificar Cliente - ID</INT_NOTE>
+      <INT_NOTE>Modificar Material</INT_NOTE>
      </RSMPE_STAT>
     </STA>
     <FUN>
@@ -408,65 +526,65 @@
       <OBJ_TYPE>A</OBJ_TYPE>
       <OBJ_CODE>000001</OBJ_CODE>
       <MODAL>D</MODAL>
-      <INT_NOTE>Criar Cliente</INT_NOTE>
+      <INT_NOTE>Criar Material</INT_NOTE>
      </RSMPE_ATRT>
      <RSMPE_ATRT>
       <OBJ_TYPE>P</OBJ_TYPE>
       <OBJ_CODE>000001</OBJ_CODE>
       <MODAL>D</MODAL>
-      <INT_NOTE>Criar Cliente</INT_NOTE>
+      <INT_NOTE>Criar Material</INT_NOTE>
      </RSMPE_ATRT>
      <RSMPE_ATRT>
       <OBJ_TYPE>B</OBJ_TYPE>
       <OBJ_CODE>000001</OBJ_CODE>
       <SUB_CODE>0001</SUB_CODE>
       <MODAL>D</MODAL>
-      <INT_NOTE>Criar Cliente</INT_NOTE>
+      <INT_NOTE>Criar Material</INT_NOTE>
      </RSMPE_ATRT>
      <RSMPE_ATRT>
       <OBJ_TYPE>A</OBJ_TYPE>
       <OBJ_CODE>000002</OBJ_CODE>
       <MODAL>D</MODAL>
-      <INT_NOTE>Modificar Cliente - ID</INT_NOTE>
+      <INT_NOTE>Modificar Material</INT_NOTE>
      </RSMPE_ATRT>
      <RSMPE_ATRT>
       <OBJ_TYPE>P</OBJ_TYPE>
       <OBJ_CODE>000002</OBJ_CODE>
       <MODAL>D</MODAL>
-      <INT_NOTE>Modificar Cliente - ID</INT_NOTE>
+      <INT_NOTE>Modificar Material</INT_NOTE>
      </RSMPE_ATRT>
      <RSMPE_ATRT>
       <OBJ_TYPE>B</OBJ_TYPE>
       <OBJ_CODE>000002</OBJ_CODE>
       <SUB_CODE>0001</SUB_CODE>
       <MODAL>D</MODAL>
-      <INT_NOTE>Modificar Cliente - ID</INT_NOTE>
+      <INT_NOTE>Modificar Material</INT_NOTE>
      </RSMPE_ATRT>
     </DOC>
     <TIT>
      <RSMPE_TITT>
       <CODE>CREAT</CODE>
-      <TEXT>Criar Cliente</TEXT>
+      <TEXT>Criar Material</TEXT>
      </RSMPE_TITT>
      <RSMPE_TITT>
-      <CODE>IDEL</CODE>
-      <TEXT>Excluir Cliente - ID</TEXT>
+      <CODE>DEL</CODE>
+      <TEXT>Excluir Material</TEXT>
      </RSMPE_TITT>
      <RSMPE_TITT>
-      <CODE>IDMOD</CODE>
-      <TEXT>Modificar Cliente - ID</TEXT>
+      <CODE>MOD</CODE>
+      <TEXT>Modificar Material</TEXT>
      </RSMPE_TITT>
      <RSMPE_TITT>
       <CODE>MODIF</CODE>
-      <TEXT>Modificação de Cliente</TEXT>
+      <TEXT>Modificação de Material</TEXT>
      </RSMPE_TITT>
     </TIT>
    </CUA>
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Força de vendas</ENTRY>
-     <LENGTH>15</LENGTH>
+     <ENTRY>FV - Material</ENTRY>
+     <LENGTH>13</LENGTH>
     </item>
    </TPOOL>
   </asx:values>
