@@ -5,7 +5,7 @@ FORM incluir_material .
   INSERT zfv_material FROM gd_material.
 
   IF sy-subrc = 0.
-    MESSAGE: 'O Material foi cadastrado coom sucesso' TYPE 'S'.
+    MESSAGE: 'O Material foi cadastrado com sucesso' TYPE 'S'.
   ELSE.
     MESSAGE: 'Não foi possível cadastrar o material' TYPE 'S' DISPLAY LIKE 'E'.
   ENDIF.
@@ -36,5 +36,21 @@ FORM modificacao_material.
 ENDFORM.
 
 FORM excluir_material .
+
+  SELECT SINGLE * FROM zfv_material INTO gd_material WHERE matnr = ld_material.
+
+  IF sy-subrc <> 0.
+    MESSAGE: |O material { ld_material } não existe!| TYPE 'S' DISPLAY LIKE 'E'.
+    EXIT.
+  ENDIF.
+
+  DELETE FROM zfv_material WHERE matnr = ld_material.
+
+  IF sy-subrc = 0.
+    MESSAGE: 'O material foi excluido com sucesso' TYPE 'S'.
+  ELSE.
+    MESSAGE: 'Não foi possível excluir o material' TYPE 'E' DISPLAY LIKE 'E'.
+  ENDIF.
+
 
 ENDFORM.
